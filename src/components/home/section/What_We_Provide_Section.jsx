@@ -76,14 +76,9 @@ export default function What_We_Provide_Section() {
               items.map((item, index) => (
                 <NavLink key={item.id} to={item.link}>
                   <div className="flex flex-col h-full">
-                    <button className="bg-black text-center p-3 md:p-6 rounded-xl border border-[#E6D28C]/20 hover:border-[#E6D28C]/50 hover:shadow-[0_0_15px_rgba(230,210,140,0.2)] transition-all duration-300 transform hover:-translate-y-1 h-full">
+                    <button className="bg-black text-[#E6D28C] text-sm md:text-base lg:text-xl p-3 md:p-6 rounded-xl border border-[#E6D28C]/20 hover:border-[#E6D28C]/50 hover:shadow-[0_0_15px_rgba(230,210,140,0.2)] transition-all duration-300 transform hover:-translate-y-1 h-full">
                       {/* <span className="block text-3xl mb-2">🎵</span> */}
-                      <h1 className="text-[#E6D28C] text-xs md:text-xl font-bold mb-2">
-                        {item.title}
-                      </h1>
-                      <span className="text-[#E6D28C]/50 text-xs md:text-xs">
-                        {item.description}
-                      </span>
+                      {item.title}
                     </button>
                   </div>
                 </NavLink>

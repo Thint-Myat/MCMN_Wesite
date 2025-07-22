@@ -55,7 +55,7 @@ export default function Home() {
               <div className="absolute bottom-1/4 right-1/3 w-48 h-48 bg-[radial-gradient(ellipse_at_center,_#D4AF37_0%,_transparent_70%)] opacity-[0.03] mix-blend-overlay"></div>
             </div>
 
-            {/* Enhanced music notes pattern with gold tint */}
+            {/* Music notes pattern with gold tint */}
             <div className="absolute inset-0 bg-[url('/images/music-notes-pattern.png')] opacity-[0.08] mix-blend-color-dodge z-0"></div>
 
             {/* Diagonal gold accent */}
@@ -66,7 +66,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_30%,_#000_100%)] opacity-40 z-0"></div>
 
             <div className="relative z-10 text-center px-4">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-[#E6D28C] to-[#D4AF37] bg-clip-text text-transparent animate-gradient drop-shadow-[0_0_2px_rgba(0,0,0,0.8)]">
+              <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-[#E6D28C] to-[#D4AF37] bg-clip-text text-transparent animate-gradient drop-shadow-[0_0_2px_rgba(0,0,0,0.8)]">
                 Myanmar Christian Music Network
               </h1>
               <p className="text-lg md:text-xl text-[#E6D28C]/80 max-w-3xl mx-auto mb-8">
@@ -99,19 +99,19 @@ export default function Home() {
         <What_We_Provide_Section />
 
         {/* SECTION: Featured Artists */}
-        <Featured_Artists_Section />
+        {/* <Featured_Artists_Section /> */}
 
         {/* SECTION: Latest Releases */}
-        <Latest_Releases_Section />
+        {/* <Latest_Releases_Section /> */}
 
         {/* SECTION: Upcoming Events */}
-        <Upcoming_Events_Section />
+        {/* <Upcoming_Events_Section /> */}
 
         {/* SECTION: Organizations */}
-        <Organizations_Section />
+        {/* <Organizations_Section /> */}
 
         {/* SECTION: Newsletter */}
-        <Newsletter_Section />
+        {/* <Newsletter_Section /> */}
       </div>
 
       {/* Add custom styles for scroll animations */}

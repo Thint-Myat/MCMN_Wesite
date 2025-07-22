@@ -65,7 +65,7 @@ export default function About() {
         <Mission_And_Vision_Section activeTab={activeTab} />
 
         {/* SECTION: Join Us */}
-        <Join_Us_Section activeTab={activeTab} />
+        {/* <Join_Us_Section activeTab={activeTab} /> */}
       </div>
 
       {/* Add custom styles for scroll animations */}

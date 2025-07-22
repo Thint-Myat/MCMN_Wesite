@@ -17,10 +17,10 @@ const tabs = [
     id: "mission & vision",
     label: "Mission & Vision",
   },
-  {
-    id: "join us",
-    label: "Join Us",
-  },
+  // {
+  //   id: "join us",
+  //   label: "Join Us",
+  // },
 ];
 
 export default function Navigation_Tabs({ activeTab, setActiveTab }) {
