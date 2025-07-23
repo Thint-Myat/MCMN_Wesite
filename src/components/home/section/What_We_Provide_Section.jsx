@@ -12,23 +12,23 @@ const items = [
     icon: "🎵",
   },
   // Cover Song Licence
-  {
-    id: 2,
-    title: "Cover Song Licence",
-    description:
-      "We provide cover song licence services to help artists get recognition for their covers.",
-    link: "/cover-song-copyright-licence",
-    icon: "📝",
-  },
+  // {
+  //   id: 2,
+  //   title: "Cover Song Licence",
+  //   description:
+  //     "We provide cover song licence services to help artists get recognition for their covers.",
+  //   link: "/cover-song-copyright-licence",
+  //   icon: "📝",
+  // },
   // Church Licence
-  {
-    id: 3,
-    title: "Church Licence",
-    description:
-      "We provide church licence services to help churches get recognition for their music.",
-    link: "/church-copyright-licence",
-    icon: "⛪",
-  },
+  // {
+  //   id: 3,
+  //   title: "Church Licence",
+  //   description:
+  //     "We provide church licence services to help churches get recognition for their music.",
+  //   link: "/church-copyright-licence",
+  //   icon: "⛪",
+  // },
   // Music School
   {
     id: 4,

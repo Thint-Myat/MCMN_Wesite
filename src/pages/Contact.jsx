@@ -50,11 +50,11 @@ export default function Contact() {
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-[#E6D28C] to-[#D4AF37] bg-clip-text text-transparent animate-gradient drop-shadow-[0_0_2px_rgba(0,0,0,0.8)]">
                 Get In Touch
               </h1>
-              <p className="text-lg md:text-xl text-[#E6D28C]/80 max-w-3xl mx-auto">
+              {/* <p className="text-lg md:text-xl text-[#E6D28C]/80 max-w-3xl mx-auto">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s...
-              </p>
+              </p> */}
             </div>
 
             {/* Enhanced animated elements */}
@@ -79,7 +79,7 @@ export default function Contact() {
             <Contact_Information_Section />
 
             {/* SECTION: Contact Form */}
-            <Contact_Form_Section />
+            {/* <Contact_Form_Section /> */}
           </div>
         </div>
 

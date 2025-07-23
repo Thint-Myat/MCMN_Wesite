@@ -1,6 +1,128 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+const socialLinks = [
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/MyanmarChristianMusicNetwork",
+  },
+  {
+    label: "Instagram",
+    href: "https://instagram.com/myanmarchristianmusicnetwork",
+  },
+  {
+    label: "YouTube",
+    href: "https://youtube.com/@MyanmarChristianMusicNetwork",
+  },
+  {
+    label: "Telegram",
+    href: "https://t.me/MyanmarChristianMusicNetwork",
+  },
+  {
+    label: "Viber",
+    href: "https://invite.viber.com/?g2=AQBqyoGW9J5ObFC%2BgmWs8wyGVUjtJoCvEZyZAS%2BVuP1%2FeN2%2B8WaVC9x5WcZzlieQ",
+  },
+];
+
+export function socialLinkIcons(label) {
+  switch (label) {
+    // Facebook
+    case "Facebook":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-colors duration-300"
+        >
+          <path
+            fill="currentColor"
+            d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"
+          />
+        </svg>
+      );
+    // Instagram
+    case "Instagram":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-colors duration-300"
+        >
+          <path
+            fill="currentColor"
+            d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"
+          />
+        </svg>
+      );
+    // YouTube
+    case "YouTube":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-colors duration-300"
+        >
+          <path
+            fill="currentColor"
+            d="m10 15l5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73"
+          />
+        </svg>
+      );
+    // Telegram
+    case "Telegram":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-colors duration-300"
+        >
+          <path
+            fill="currentColor"
+            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2m4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19c-.14.75-.42 1-.68 1.03c-.58.05-1.02-.38-1.58-.75c-.88-.58-1.38-.94-2.23-1.5c-.99-.65-.35-1.01.22-1.59c.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02c-.09.02-1.49.95-4.22 2.79c-.4.27-.76.41-1.08.4c-.36-.01-1.04-.2-1.55-.37c-.63-.2-1.12-.31-1.08-.66c.02-.18.27-.36.74-.55c2.92-1.27 4.86-2.11 5.83-2.51c2.78-1.16 3.35-1.36 3.73-1.36c.08 0 .27.02.39.12c.1.08.13.19.14.27c-.01.06.01.24 0 .38"
+          />
+        </svg>
+      );
+    // Viber
+    case "Viber":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-colors duration-300"
+        >
+          <path
+            fill="currentColor"
+            d="M7.965 6.202a.82.82 0 0 0-.537.106h-.014c-.375.22-.713.497-1.001.823c-.24.277-.37.557-.404.827c-.02.16-.006.322.041.475l.018.01c.27.793.622 1.556 1.052 2.274a13.4 13.4 0 0 0 2.03 2.775l.024.034l.038.028l.023.027l.028.024a13.6 13.6 0 0 0 2.782 2.04c1.155.629 1.856.926 2.277 1.05v.006c.123.038.235.055.348.055a1.6 1.6 0 0 0 .964-.414c.325-.288.6-.627.814-1.004v-.007c.201-.38.133-.738-.157-.981A12 12 0 0 0 14.41 13c-.448-.243-.903-.096-1.087.15l-.393.496c-.202.246-.568.212-.568.212l-.01.006c-2.731-.697-3.46-3.462-3.46-3.462s-.034-.376.219-.568l.492-.396c.236-.192.4-.646.147-1.094a12 12 0 0 0-1.347-1.88a.75.75 0 0 0-.44-.263M12.58 5a.5.5 0 0 0 0 1c1.264 0 2.314.413 3.145 1.205c.427.433.76.946.978 1.508c.219.563.319 1.164.293 1.766a.5.5 0 0 0 1 .042a5.4 5.4 0 0 0-.361-2.17a5.4 5.4 0 0 0-1.204-1.854l-.01-.01C15.39 5.502 14.085 5 12.579 5"
+          />
+          <path
+            fill="currentColor"
+            d="M12.545 6.644a.5.5 0 0 0 0 1h.017c.912.065 1.576.369 2.041.868c.477.514.724 1.153.705 1.943a.5.5 0 0 0 1 .023c.024-1.037-.31-1.932-.972-2.646V7.83c-.677-.726-1.606-1.11-2.724-1.185l-.017-.002z"
+          />
+          <path
+            fill="currentColor"
+            d="M12.526 8.319a.5.5 0 1 0-.052.998c.418.022.685.148.853.317c.169.17.295.443.318.87a.5.5 0 1 0 .998-.053c-.032-.6-.22-1.13-.605-1.52c-.387-.39-.914-.58-1.512-.612"
+          />
+          <path
+            fill="currentColor"
+            fill-rule="evenodd"
+            d="M7.067 2.384a22.15 22.15 0 0 1 9.664 0l.339.075a5.16 5.16 0 0 1 3.872 3.763a19.7 19.7 0 0 1 0 9.7a5.16 5.16 0 0 1-3.872 3.763l-.34.075a22.2 22.2 0 0 1-6.077.499L8 22.633a.75.75 0 0 1-1.24-.435l-.439-2.622a5.16 5.16 0 0 1-3.465-3.654a19.7 19.7 0 0 1 0-9.7a5.16 5.16 0 0 1 3.872-3.763zm9.337 1.463a20.65 20.65 0 0 0-9.01 0l-.34.076A3.66 3.66 0 0 0 4.31 6.591a18.2 18.2 0 0 0 0 8.962a3.66 3.66 0 0 0 2.745 2.668l.09.02a.75.75 0 0 1 .576.608l.294 1.758l1.872-1.675a.75.75 0 0 1 .553-.19a20.7 20.7 0 0 0 5.964-.445l.339-.076a3.66 3.66 0 0 0 2.745-2.668c.746-2.94.746-6.021 0-8.962a3.66 3.66 0 0 0-2.745-2.668z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      );
+  }
+}
+
 const quickLinks = [
   {
     label: "Home",
@@ -20,22 +142,73 @@ const quickLinks = [
   },
 ];
 
-export function MaterialSymbolsMailRounded(props) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="1em"
-      height="1em"
-      viewBox="0 0 24 24"
-      {...props}
-    >
-      {/* Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE */}
-      <path
-        fill="currentColor"
-        d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7.175q.125 0 .263-.038t.262-.112L19.6 8.25q.2-.125.3-.312t.1-.413q0-.5-.425-.75T18.7 6.8L12 11L5.3 6.8q-.45-.275-.875-.012T4 7.525q0 .25.1.438t.3.287l7.075 4.425q.125.075.263.113t.262.037"
-      />
-    </svg>
-  );
+const contactInfo = [
+  {
+    label: "Address",
+    value:
+      "Building A2, Room 804, Bo Ba Htoo Housing Complex I, Ward 48, North Dagon Township, Yangon",
+  },
+  {
+    label: "Phone",
+    value: "+959 799901085",
+  },
+  {
+    label: "Email",
+    value: "myanmarchristianmusicnetwork@gmail.com",
+  },
+];
+
+export function contactInfoIcons(label) {
+  switch (label) {
+    // Address
+    case "Address":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-colors duration-300 mt-1"
+        >
+          <path
+            fill="currentColor"
+            d="M12 12q.825 0 1.413-.587T14 10t-.587-1.412T12 8t-1.412.588T10 10t.588 1.413T12 12m0 10q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2t5.588 2.225T20 10.2q0 2.5-1.987 5.438T12 22"
+          />
+        </svg>
+      );
+    // Phone
+    case "Phone":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-colors duration-300 mt-1"
+        >
+          <path
+            fill="currentColor"
+            d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.32.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02z"
+          />
+        </svg>
+      );
+    // Email
+    case "Email":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-colors duration-300 mt-1"
+        >
+          <path
+            fill="currentColor"
+            d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7.175q.125 0 .263-.038t.262-.112L19.6 8.25q.2-.125.3-.312t.1-.413q0-.5-.425-.75T18.7 6.8L12 11L5.3 6.8q-.45-.275-.875-.012T4 7.525q0 .25.1.438t.3.287l7.075 4.425q.125.075.263.113t.262.037"
+          />
+        </svg>
+      );
+  }
 }
 
 export default function Footer() {
@@ -77,91 +250,23 @@ export default function Footer() {
 
         {/* Main footer content */}
         <div className="relative z-10 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Column 1: About & Social */}
+          {/* Column 1: Social */}
           <div className="scroll-animate opacity-0 translate-y-10">
             <h2 className="text-xl font-bold mb-4 bg-gradient-to-r from-[#E6D28C] to-[#D4AF37] bg-clip-text text-transparent animate-gradient">
               Follow Us
             </h2>
             <div className="flex gap-4 mt-3">
-              {/* Facebook */}
-              <Link
-                to="https://www.facebook.com/MyanmarChristianMusicNetwork"
-                className="transform transition-all duration-300 hover:scale-110 group"
-                aria-label="Facebook"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-colors duration-300"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"
-                  />
-                </svg>
-              </Link>
-
-              {/* Spotify */}
-              {/* <Link
-                to="#"
-                className="transform transition-all duration-300 hover:scale-110 group"
-                aria-label="Spotify"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-colors duration-300"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M17.9 10.9C14.7 9 9.35 8.8 6.3 9.75c-.5.15-1-.15-1.15-.6c-.15-.5.15-1 .6-1.15c3.55-1.05 9.4-.85 13.1 1.35c.45.25.6.85.35 1.3c-.25.35-.85.5-1.3.25m-.1 2.8c-.25.35-.7.5-1.05.25c-2.7-1.65-6.8-2.15-9.95-1.15c-.4.1-.85-.1-.95-.5s.1-.85.5-.95c3.65-1.1 8.15-.55 11.25 1.35c.3.15.45.65.2 1m-1.2 2.75c-.2.3-.55.4-.85.2c-2.35-1.45-5.3-1.75-8.8-.95c-.35.1-.65-.15-.75-.45c-.1-.35.15-.65.45-.75c3.8-.85 7.1-.5 9.7 1.1c.35.15.4.55.25.85M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2"
-                  />
-                </svg>
-              </Link> */}
-
-              {/* Instagram */}
-              <Link
-                to="https://instagram.com/myanmarchristianmusicnetwork"
-                className="transform transition-all duration-300 hover:scale-110 group"
-                aria-label="Instagram"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-colors duration-300"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"
-                  />
-                </svg>
-              </Link>
-
-              {/* YouTube */}
-              <Link
-                to="https://youtube.com/@MyanmarChristianMusicNetwork"
-                className="transform transition-all duration-300 hover:scale-110 group"
-                aria-label="YouTube"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-colors duration-300"
-                >
-                  <path
-                    fill="currentColor"
-                    d="m10 15l5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73"
-                  />
-                </svg>
-              </Link>
+              {socialLinks.length &&
+                socialLinks.map((link, index) => (
+                  <Link
+                    key={index}
+                    to={link.href}
+                    className="transform transition-all duration-300 hover:scale-110 group"
+                    aria-label={link.label}
+                  >
+                    {socialLinkIcons(link.label)}
+                  </Link>
+                ))}
             </div>
           </div>
 
@@ -197,83 +302,18 @@ export default function Footer() {
               Contact Us
             </h2>
             <div className="space-y-3">
-              <div className="flex items-center gap-2 group">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-colors duration-300 mt-1"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"
-                  />
-                </svg>
-                <p className="text-[#E6D28C]/80 group-hover:text-[#D4AF37] transition-colors duration-300">
-                  No.1126(A), Kantharyar 1st street, 35 Quarter, North Dagon
-                  Township, Yangon
-                </p>
-              </div>
-              <div className="flex items-center gap-2 group">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-colors duration-300 mt-1"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.32.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02z"
-                  />
-                </svg>
-                <p className="text-[#E6D28C]/80 group-hover:text-[#D4AF37] transition-colors duration-300">
-                  +959 799901085
-                </p>
-              </div>
-              <div className="flex items-center gap-2 group">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-colors duration-300 mt-1"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7.175q.125 0 .263-.038t.262-.112L19.6 8.25q.2-.125.3-.312t.1-.413q0-.5-.425-.75T18.7 6.8L12 11L5.3 6.8q-.45-.275-.875-.012T4 7.525q0 .25.1.438t.3.287l7.075 4.425q.125.075.263.113t.262.037"
-                  />
-                </svg>
-                <p className="text-[#E6D28C]/80 group-hover:text-[#D4AF37] transition-colors duration-300">
-                  myanmarchristianmusicnetwork@gmail.com
-                </p>
-              </div>
+              {contactInfo.length &&
+                contactInfo.map((info, index) => (
+                  <div key={index} className="flex items-center gap-2 group">
+                    {contactInfoIcons(info.label)}
+                    <p className="text-[#E6D28C]/80 group-hover:text-[#D4AF37] transition-colors duration-300">
+                      {info.value}
+                    </p>
+                  </div>
+                ))}
             </div>
           </div>
         </div>
-        {/* Column 4: Newsletter */}
-        {/* <div
-          className="scroll-animate opacity-0 translate-y-10"
-          style={{ transitionDelay: "300ms" }}
-        >
-          <h2 className="text-xl font-bold mb-4 bg-gradient-to-r from-[#E6D28C] to-[#D4AF37] bg-clip-text text-transparent animate-gradient">
-            Newsletter
-          </h2>
-          <p className="text-[#E6D28C]/80 mb-3">
-            Subscribe for updates on new releases and events.
-          </p>
-          <div className="flex flex-col gap-2">
-            <input
-              type="email"
-              placeholder="Your email address"
-              className="px-4 py-2 rounded-lg bg-black/50 border border-[#E6D28C]/30 text-[#E6D28C] placeholder-[#E6D28C]/50 focus:outline-none focus:border-[#E6D28C] transition-all duration-300"
-            />
-            <button className="px-4 py-2 bg-gradient-to-r from-[#E6D28C] to-[#D4AF37] text-black rounded-lg text-sm font-bold hover:shadow-[0_0_15px_rgba(230,210,140,0.5)] transition-all duration-300 transform hover:scale-105">
-              Subscribe
-            </button>
-          </div>
-        </div> */}
 
         {/* Divider with gold gradient */}
         <div className="relative z-10">
