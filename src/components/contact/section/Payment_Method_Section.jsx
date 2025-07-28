@@ -61,10 +61,10 @@ export default function Payment_Method_Section() {
                     {method.title}
                   </h3>
                 </div>
-                <p className="text-[#E6D28C]/70 text-xs md:text-sm lg:text-base">
+                <p className="text-[#E6D28C]/70 text-sm md:text-base">
                   Name: {method.name}
                 </p>
-                <p className="text-[#E6D28C]/70 text-xs md:text-sm lg:text-base">
+                <p className="text-[#E6D28C]/70 text-sm md:text-base">
                   Phone No: {method.phone}
                 </p>
               </div>

@@ -31,9 +31,10 @@ export default function Services_Section() {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="2em"
+        width="1.5em"
         height="1.5em"
         viewBox="0 0 24 24"
+        className="flex-shrink-0"
         {...props}
       >
         <path
@@ -45,24 +46,24 @@ export default function Services_Section() {
   }
   return (
     <>
-      <div className="mt-12 scroll-animate opacity-0 translate-y-10 transition-all duration-1000">
-        <div className="bg-[#111] rounded-3xl border border-[#E6D28C]/10 shadow-[0_0_15px_rgba(230,210,140,0.1)] overflow-hidden p-8 md:p-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center bg-gradient-to-r from-[#E6D28C] to-[#D4AF37] bg-clip-text text-transparent animate-gradient">
+      <div className="mt-8 md:mt-12 scroll-animate opacity-0 translate-y-10 transition-all duration-1000">
+        <div className="bg-[#111] rounded-2xl md:rounded-3xl border border-[#E6D28C]/10 shadow-[0_0_15px_rgba(230,210,140,0.1)] overflow-hidden p-6 md:p-8 lg:p-12">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-6 md:mb-8 text-center bg-gradient-to-r from-[#E6D28C] to-[#D4AF37] bg-clip-text text-transparent animate-gradient px-4 md:px-0">
             လက်ရှိ MCMN မှာပြုလုပ်ပေးနေတဲ့အရာများ
           </h2>
 
           {/* Services */}
-          <ul className="space-y-4 max-w-3xl mx-auto">
+          <ul className="space-y-3 md:space-y-4 max-w-4xl mx-auto">
             {Services.length &&
               Services.map((service, index) => (
                 <li
                   key={index}
-                  className="flex items-center gap-4 p-4 bg-black/50 rounded-xl border border-[#E6D28C]/20 hover:border-[#E6D28C]/40 transition-all duration-300 group"
+                  className="flex items-start md:items-center gap-3 md:gap-4 p-3 md:p-4 bg-black/50 rounded-lg md:rounded-xl border border-[#E6D28C]/20"
                 >
-                  <div className="w-10 h-10 rounded-full bg-[#E6D28C]/10 flex items-center justify-center group-hover:bg-[#E6D28C]/20 transition-all duration-300">
-                    <MiChevronRight className="text-[#E6D28C]" />
+                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#E6D28C]/10 flex items-center justify-center mt-1 md:mt-0 flex-shrink-0">
+                    <MiChevronRight className="text-[#E6D28C] text-sm md:text-base" />
                   </div>
-                  <span className="text-[#E6D28C]/90 group-hover:text-[#E6D28C] transition-all duration-300">
+                  <span className="text-[#E6D28C]/90 text-sm md:text-base leading-relaxed flex-1">
                     {service.description}
                   </span>
                 </li>

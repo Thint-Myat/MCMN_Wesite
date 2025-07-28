@@ -86,50 +86,83 @@ export default function Distribution_Process_Section() {
   return (
     <>
       <div className="scroll-animate opacity-0 translate-y-10 transition-all duration-1000">
-        <div className="bg-[#111] rounded-3xl border border-[#E6D28C]/10 shadow-[0_0_15px_rgba(230,210,140,0.1)] overflow-hidden p-8 md:p-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center bg-gradient-to-r from-[#E6D28C] to-[#D4AF37] bg-clip-text text-transparent animate-gradient">
+        <div className="bg-[#111] rounded-2xl md:rounded-3xl border border-[#E6D28C]/10 shadow-[0_0_15px_rgba(230,210,140,0.1)] overflow-hidden p-6 md:p-8 lg:p-12">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-6 md:mb-8 text-center bg-gradient-to-r from-[#E6D28C] to-[#D4AF37] bg-clip-text text-transparent animate-gradient px-4 md:px-0">
             Distribution Process
           </h2>
 
           {/* Process Timeline */}
           <div className="relative max-w-5xl mx-auto">
-            {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-[#E6D28C]/50 to-[#D4AF37]/50 hidden md:block"></div>
+            {/* Timeline Line - Hidden on mobile */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-[#E6D28C]/50 to-[#D4AF37]/50 hidden lg:block"></div>
 
             {/* Steps */}
-            <div className="space-y-12 md:space-y-0">
+            <div className="space-y-6 md:space-y-8 lg:space-y-0">
               {Steps.map((step, index) => (
                 <div key={index} className="relative">
-                  <div className={`md:flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                  <div
+                    className={`lg:flex items-center ${
+                      index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+                    }`}
+                  >
                     {/* Timeline Circle for Desktop */}
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-[#111] border-4 border-[#E6D28C] z-10 hidden md:flex items-center justify-center">
-                      <span className="text-[#E6D28C] font-bold">{step.id}</span>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-[#111] border-4 border-[#E6D28C] z-10 hidden lg:flex items-center justify-center">
+                      <span className="text-[#E6D28C] font-bold text-sm">
+                        {step.id}
+                      </span>
                     </div>
 
                     {/* Content */}
-                    <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>
-                      <div className="bg-black rounded-xl overflow-hidden border border-[#E6D28C]/20 hover:border-[#E6D28C]/50 hover:shadow-[0_0_15px_rgba(230,210,140,0.2)] transition-all duration-300 transform hover:-translate-y-1 group p-6">
-                        <div className="flex items-center gap-4 mb-4 md:hidden">
-                          <div className="w-12 h-12 rounded-full bg-[#E6D28C]/10 flex items-center justify-center text-xl font-bold text-[#E6D28C] group-hover:bg-[#E6D28C]/20 transition-all duration-300">
+                    <div
+                      className={`lg:w-1/2 ${
+                        index % 2 === 0 ? "lg:pr-12 lg:text-right" : "lg:pl-12"
+                      }`}
+                    >
+                      <div className="bg-black rounded-lg md:rounded-xl overflow-hidden border border-[#E6D28C]/20 p-4 md:p-6">
+                        {/* Mobile Layout */}
+                        <div className="flex items-start gap-3 md:gap-4 mb-3 md:mb-4 lg:hidden">
+                          <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#E6D28C]/10 flex items-center justify-center text-lg md:text-xl font-bold text-[#E6D28C]">
                             {step.id}
                           </div>
-                          <h3 className="text-xl font-bold text-[#E6D28C]">
-                            {step.title}
-                          </h3>
-                        </div>
-                        <div className="hidden md:block">
-                          <div className="flex items-center gap-4 mb-4 justify-end">
-                            <h3 className="text-xl font-bold text-[#E6D28C]">
+                          <div className="flex-1 min-w-0">
+                            <h3 className="text-lg md:text-xl font-bold text-[#E6D28C] mb-2 leading-tight">
                               {step.title}
                             </h3>
-                            <div className="w-12 h-12 rounded-full bg-[#E6D28C]/10 flex items-center justify-center group-hover:bg-[#E6D28C]/20 transition-all duration-300">
-                              {step.icon}
-                            </div>
+                            <p className="text-sm md:text-base text-[#E6D28C]/70 leading-relaxed">
+                              {step.description}
+                            </p>
                           </div>
                         </div>
-                        <p className={`text-[#E6D28C]/70 leading-7 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
-                          {step.description}
-                        </p>
+
+                        {/* Desktop Layout */}
+                        <div className="hidden lg:block">
+                          <div
+                            className={`flex items-center gap-4 mb-4 ${
+                              index % 2 === 0 ? "justify-end" : "justify-start"
+                            }`}
+                          >
+                            {index % 2 === 0 ? (
+                              <>
+                                <h3 className="text-xl font-bold text-[#E6D28C]">
+                                  {step.title}
+                                </h3>
+                              </>
+                            ) : (
+                              <>
+                                <h3 className="text-xl font-bold text-[#E6D28C]">
+                                  {step.title}
+                                </h3>
+                              </>
+                            )}
+                          </div>
+                          <p
+                            className={`text-[#E6D28C]/70 leading-7 ${
+                              index % 2 === 0 ? "text-right" : "text-left"
+                            }`}
+                          >
+                            {step.description}
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>

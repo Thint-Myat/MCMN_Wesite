@@ -13,23 +13,21 @@ const tabs = [
 export default function Navigation_Tabs({ activeTab, setActiveTab }) {
   return (
     <>
-      <div className="padding scroll-animate opacity-0 translate-y-10 mt-10 mb-10 bg-gradient-to-br from-[#000] to-[#111] rounded-full border border-[#E6D28C]/10 shadow-[0_0_15px_rgba(230,210,140,0.15)] overflow-hidden transition-all duration-300 ">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex overflow-x-auto hide-scrollbar py-2 gap-1 sm:gap-2 justify-start sm:justify-center">
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`px-4 py-1 whitespace-nowrap rounded-full text-sm sm:text-base font-medium transition-all duration-300 ${
-                  activeTab === tab.id
-                    ? "bg-gradient-to-r from-[#E6D28C] to-[#D4AF37] text-black shadow-[0_0_10px_rgba(230,210,140,0.3)]"
-                    : "text-[#E6D28C]/70 hover:text-[#E6D28C] hover:bg-[#E6D28C]/10"
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
+      <div className="scroll-animate opacity-0 translate-y-10 transition-all duration-1000">
+        <div className="flex overflow-x-auto hide-scrollbar gap-1 sm:gap-2 justify-start sm:justify-center mt-10 mb-10 border-b border-[#E6D28C]/20">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`px-3 py-2 mx-1 sm:px-4 sm:mx-2 whitespace-nowrap text-base sm:text-sm md:text-base font-medium transition-all duration-300 ${
+                activeTab === tab.id
+                  ? "text-[#D4AF37] border-b-2 border-[#D4AF37]"
+                  : "text-[#E6D28C]/70 hover:text-[#E6D28C]"
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
         </div>
       </div>
     </>

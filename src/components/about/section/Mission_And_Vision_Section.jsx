@@ -11,7 +11,7 @@ export default function Mission_And_Vision_Section({ activeTab }) {
                 Our Mission & Vision
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
-                <div className="bg-black/50 p-6 rounded-xl border border-[#E6D28C]/10 hover:border-[#E6D28C]/30 transition-all duration-300 hover:shadow-[0_0_15px_rgba(230,210,140,0.15)]">
+                <div className="bg-black/50 p-6 rounded-xl border border-[#E6D28C]/10">
                   <h3 className="text-xl font-bold text-[#E6D28C] mb-3 border-b border-[#E6D28C]/20 pb-2">
                     Our Mission
                   </h3>
@@ -22,7 +22,7 @@ export default function Mission_And_Vision_Section({ activeTab }) {
                     God and reaches hearts across the nation and beyond.
                   </p>
                 </div>
-                <div className="bg-black/50 p-6 rounded-xl border border-[#E6D28C]/10 hover:border-[#E6D28C]/30 transition-all duration-300 hover:shadow-[0_0_15px_rgba(230,210,140,0.15)]">
+                <div className="bg-black/50 p-6 rounded-xl border border-[#E6D28C]/10">
                   <h3 className="text-xl font-bold text-[#E6D28C] mb-3 border-b border-[#E6D28C]/20 pb-2">
                     Our Vision
                   </h3>
@@ -37,6 +37,7 @@ export default function Mission_And_Vision_Section({ activeTab }) {
                   </p>
                 </div>
               </div>
+              {/* Hover effect - hover:border-[#E6D28C]/30 transition-all duration-300 hover:shadow-[0_0_15px_rgba(230,210,140,0.15)] */}
             </div>
           </div>
         </div>

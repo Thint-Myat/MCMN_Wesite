@@ -18,8 +18,7 @@ export default function Who_We_Are_Section({ activeTab }) {
                 share this calling.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                <div className="bg-black/50 p-5 rounded-xl border border-[#E6D28C]/5 hover:border-[#E6D28C]/20 transition-all duration-300 hover:shadow-[0_0_10px_rgba(230,210,140,0.1)]">
-                  <div className="text-2xl mb-2">🎵</div>
+                <div className="bg-black/50 p-5 rounded-xl border border-[#E6D28C]/5">
                   <h3 className="text-xl font-bold text-[#E6D28C] mb-2">
                     Musicians & Artists
                   </h3>
@@ -28,8 +27,7 @@ export default function Who_We_Are_Section({ activeTab }) {
                     in the Christian music industry.
                   </p>
                 </div>
-                <div className="bg-black/50 p-5 rounded-xl border border-[#E6D28C]/5 hover:border-[#E6D28C]/20 transition-all duration-300 hover:shadow-[0_0_10px_rgba(230,210,140,0.1)]">
-                  <div className="text-2xl mb-2">🎚️</div>
+                <div className="bg-black/50 p-5 rounded-xl border border-[#E6D28C]/5">
                   <h3 className="text-xl font-bold text-[#E6D28C] mb-2">
                     Producers & Engineers
                   </h3>
@@ -38,8 +36,7 @@ export default function Who_We_Are_Section({ activeTab }) {
                     high-quality Christian music.
                   </p>
                 </div>
-                <div className="bg-black/50 p-5 rounded-xl border border-[#E6D28C]/5 hover:border-[#E6D28C]/20 transition-all duration-300 hover:shadow-[0_0_10px_rgba(230,210,140,0.1)]">
-                  <div className="text-2xl mb-2">📊</div>
+                <div className="bg-black/50 p-5 rounded-xl border border-[#E6D28C]/5">
                   <h3 className="text-xl font-bold text-[#E6D28C] mb-2">
                     Industry Experts
                   </h3>
@@ -48,8 +45,7 @@ export default function Who_We_Are_Section({ activeTab }) {
                     licensing, and copyright management.
                   </p>
                 </div>
-                <div className="bg-black/50 p-5 rounded-xl border border-[#E6D28C]/5 hover:border-[#E6D28C]/20 transition-all duration-300 hover:shadow-[0_0_10px_rgba(230,210,140,0.1)]">
-                  <div className="text-2xl mb-2">🙏</div>
+                <div className="bg-black/50 p-5 rounded-xl border border-[#E6D28C]/5">
                   <h3 className="text-xl font-bold text-[#E6D28C] mb-2">
                     Ministry Leaders
                   </h3>
@@ -59,6 +55,7 @@ export default function Who_We_Are_Section({ activeTab }) {
                   </p>
                 </div>
               </div>
+              {/* Hover effect - hover:border-[#E6D28C]/20 transition-all duration-300 hover:shadow-[0_0_10px_rgba(230,210,140,0.1)] */}
             </div>
           </div>
         </div>

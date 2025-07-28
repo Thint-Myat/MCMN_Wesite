@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 // components | hero-section
 import Hero_Section from "../hero-section/Hero_Section";
 // components | tab
@@ -84,15 +85,11 @@ export default function Music_Distribution() {
         </div>
       </div>
 
-      {/* Call to Action Section - Enhanced */}
-      <div className="bg-gradient-to-b from-[#0a0a0a] to-black py-16 md:py-24">
+      {/* Call to Action Section */}
+      <div className="bg-gradient-to-b from-[#0a0a0a] to-black py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="scroll-animate opacity-0 translate-y-10">
             <div className="bg-gradient-to-r from-[#111] to-[#0a0a0a] rounded-3xl border border-[#E6D28C]/20 shadow-[0_0_20px_rgba(230,210,140,0.1)] overflow-hidden p-8 md:p-12 relative">
-              {/* Decorative elements */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[#E6D28C]/5 to-transparent rounded-full blur-3xl"></div>
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-[#E6D28C]/5 to-transparent rounded-full blur-3xl"></div>
-
               <div className="relative z-10 text-center max-w-3xl mx-auto">
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-[#E6D28C] to-[#D4AF37] bg-clip-text text-transparent animate-gradient font-jetbrains">
                   Ready to Share Your Music with the World?
@@ -102,7 +99,7 @@ export default function Music_Distribution() {
                   ရောက်ရှိစေရန် ယခုပင် စတင်လိုက်ပါ
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
-                  <button className="px-8 py-4 bg-gradient-to-r from-[#E6D28C] to-[#D4AF37] text-black font-bold rounded-full hover:shadow-[0_0_20px_rgba(230,210,140,0.5)] transition-all duration-300 transform hover:scale-105 group">
+                  <div className="text-sm md:text-base p-3 md:p-6 bg-gradient-to-r from-[#E6D28C] to-[#D4AF37] text-black font-bold rounded-full">
                     <span className="flex items-center gap-2">
                       <span>Get Started Now</span>
                       <svg
@@ -118,10 +115,13 @@ export default function Music_Distribution() {
                         />
                       </svg>
                     </span>
-                  </button>
-                  <button className="px-8 py-4 bg-transparent border-2 border-[#E6D28C] text-[#E6D28C] font-bold rounded-full hover:bg-[#E6D28C]/10 hover:shadow-[0_0_15px_rgba(230,210,140,0.3)] transition-all duration-300 transform hover:scale-105">
+                  </div>
+                  <Link
+                    to={"/contact"}
+                    className="bg-black text-[#E6D28C] text-sm md:text-base p-3 md:p-6 rounded-full border border-[#E6D28C]/20 hover:border-[#E6D28C]/50 hover:shadow-[0_0_15px_rgba(230,210,140,0.2)] transition-all duration-300 transform hover:-translate-y-1 h-full"
+                  >
                     Contact Us
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -148,13 +148,11 @@ export default function Music_Distribution() {
           }
         }
         .scroll-animate {
-          opacity: 0;
-          transform: translateY(10px);
-          transition: opacity 0.8s ease, transform 0.8s ease;
+          transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
         .animate-in {
-          opacity: 1;
-          transform: translateY(0);
+          opacity: 1 !important;
+          transform: translateY(0) !important;
         }
       `}</style>
     </>

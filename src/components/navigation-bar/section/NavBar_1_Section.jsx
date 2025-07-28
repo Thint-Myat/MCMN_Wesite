@@ -1,5 +1,16 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+
+const desktopNavBarItems = [
+  {
+    label: "Mail",
+    to: "mailto:myanmarchristianmusicnetwork@gmail.com",
+  },
+  {
+    label: "Phone",
+    to: "tel:+959799901085",
+  },
+];
 
 export default function NavBar_1_Section({ scrolled, setShowSignUpBox }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -37,26 +48,29 @@ export default function NavBar_1_Section({ scrolled, setShowSignUpBox }) {
           ></span>
         </button>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Navigation Bar */}
         <ul className="hidden lg:flex items-center gap-3 md:gap-6">
+          {/* {desktopNavBarItems.length && desktopNavBarItems.map((item, index) => ())} */}
           {/* Mail */}
-          <div className="flex items-center gap-1 group">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              className="transition-transform duration-300 group-hover:scale-110 group-hover:text-[#D4AF37]"
-            >
-              <path
-                fill="currentColor"
-                d="M4.616 19q-.691 0-1.153-.462T3 17.384V6.616q0-.691.463-1.153T4.615 5h14.77q.69 0 1.152.463T21 6.616v10.769q0 .69-.463 1.153T19.385 19zM20 6.885l-7.552 4.944q-.106.055-.214.093q-.109.037-.234.037t-.234-.037t-.214-.093L4 6.884v10.5q0 .27.173.443t.443.173h14.769q.269 0 .442-.173t.173-.443zM12 11l7.692-5H4.308zM4 6.885v.211v-.811v.034V6v.32v-.052v.828.zV18z"
-              />
-            </svg>
-            <li className="text-sm xl:text-base hover:text-[#D4AF37] transition-colors duration-300 truncate max-w-[200px] xl:max-w-none">
-              myanmarchristianmusicnetwork@gmail.com
-            </li>
-          </div>
+          <Link to="mailto:myanmarchristianmusicnetwork@gmail.com">
+            <div className="flex items-center gap-1 group">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                className="transition-transform duration-300 group-hover:scale-110 group-hover:text-[#D4AF37]"
+              >
+                <path
+                  fill="currentColor"
+                  d="M4.616 19q-.691 0-1.153-.462T3 17.384V6.616q0-.691.463-1.153T4.615 5h14.77q.69 0 1.152.463T21 6.616v10.769q0 .69-.463 1.153T19.385 19zM20 6.885l-7.552 4.944q-.106.055-.214.093q-.109.037-.234.037t-.234-.037t-.214-.093L4 6.884v10.5q0 .27.173.443t.443.173h14.769q.269 0 .442-.173t.173-.443zM12 11l7.692-5H4.308zM4 6.885v.211v-.811v.034V6v.32v-.052v.828.zV18z"
+                />
+              </svg>
+              <li className="text-sm xl:text-base hover:text-[#D4AF37] transition-colors duration-300 truncate max-w-[200px] xl:max-w-none">
+                myanmarchristianmusicnetwork@gmail.com
+              </li>
+            </div>
+          </Link>
 
           {/* Phone */}
           <div className="flex items-center gap-1 group">
@@ -78,7 +92,7 @@ export default function NavBar_1_Section({ scrolled, setShowSignUpBox }) {
           </div>
 
           {/* Admin Link */}
-          <div className="flex items-center gap-1 group">
+          {/* <div className="flex items-center gap-1 group">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -94,7 +108,7 @@ export default function NavBar_1_Section({ scrolled, setShowSignUpBox }) {
             <li className="text-sm xl:text-base hover:text-[#D4AF37] transition-colors duration-300">
               <NavLink to="/admin">Admin</NavLink>
             </li>
-          </div>
+          </div> */}
 
           {/* Sign Up */}
           <button
