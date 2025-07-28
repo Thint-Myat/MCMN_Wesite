@@ -21,10 +21,10 @@ const menuItems = [
   //   label: "Song",
   //   path: "/song",
   // },
-  {
-    label: "Organization",
-    path: "/organization",
-  },
+  // {
+  //   label: "Organization",
+  //   path: "/organization",
+  // },
   {
     label: "Contact",
     path: "/contact",

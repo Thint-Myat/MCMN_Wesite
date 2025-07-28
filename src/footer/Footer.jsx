@@ -34,7 +34,7 @@ export function socialLinkIcons(label) {
           width="32"
           height="32"
           viewBox="0 0 24 24"
-          className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-colors duration-300"
+          className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-all duration-300 group-hover:scale-110"
         >
           <path
             fill="currentColor"
@@ -50,7 +50,7 @@ export function socialLinkIcons(label) {
           width="32"
           height="32"
           viewBox="0 0 24 24"
-          className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-colors duration-300"
+          className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-all duration-300 group-hover:scale-110"
         >
           <path
             fill="currentColor"
@@ -66,7 +66,7 @@ export function socialLinkIcons(label) {
           width="32"
           height="32"
           viewBox="0 0 24 24"
-          className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-colors duration-300"
+          className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-all duration-300 group-hover:scale-110"
         >
           <path
             fill="currentColor"
@@ -82,7 +82,7 @@ export function socialLinkIcons(label) {
           width="32"
           height="32"
           viewBox="0 0 24 24"
-          className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-colors duration-300"
+          className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-all duration-300 group-hover:scale-110"
         >
           <path
             fill="currentColor"
@@ -98,7 +98,7 @@ export function socialLinkIcons(label) {
           width="32"
           height="32"
           viewBox="0 0 24 24"
-          className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-colors duration-300"
+          className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-all duration-300 group-hover:scale-110"
         >
           <path
             fill="currentColor"
@@ -168,7 +168,7 @@ export function contactInfoIcons(label) {
           width="24"
           height="24"
           viewBox="0 0 24 24"
-          className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-colors duration-300 mt-1"
+          className="text-[#E6D28C] mt-1 flex-shrink-0"
         >
           <path
             fill="currentColor"
@@ -184,7 +184,7 @@ export function contactInfoIcons(label) {
           width="20"
           height="20"
           viewBox="0 0 24 24"
-          className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-colors duration-300 mt-1"
+          className="text-[#E6D28C] mt-1 flex-shrink-0"
         >
           <path
             fill="currentColor"
@@ -200,7 +200,7 @@ export function contactInfoIcons(label) {
           width="20"
           height="20"
           viewBox="0 0 24 24"
-          className="text-[#E6D28C] group-hover:text-[#D4AF37] transition-colors duration-300 mt-1"
+          className="text-[#E6D28C] mt-1 flex-shrink-0"
         >
           <path
             fill="currentColor"
@@ -237,7 +237,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="padding bg-gradient-to-r from-[#050505] via-[#0a0a0a] to-[#050505] font-jetbrains relative overflow-hidden">
+      <footer className="px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-[#050505] via-[#0a0a0a] to-[#050505] font-jetbrains relative overflow-hidden">
         {/* Gold dust effect overlay */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_#D4AF37_0%,_transparent_70%)] opacity-[0.03] mix-blend-overlay"></div>
@@ -249,107 +249,121 @@ export default function Footer() {
         <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-[#E6D28C]/[0.05] z-0"></div>
 
         {/* Main footer content */}
-        <div className="relative z-10 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Column 1: Social */}
-          <div className="scroll-animate opacity-0 translate-y-10">
-            <h2 className="text-xl font-bold mb-4 bg-gradient-to-r from-[#E6D28C] to-[#D4AF37] bg-clip-text text-transparent animate-gradient">
-              Follow Us
-            </h2>
-            <div className="flex gap-4 mt-3">
-              {socialLinks.length &&
-                socialLinks.map((link, index) => (
-                  <Link
-                    key={index}
-                    to={link.href}
-                    className="transform transition-all duration-300 hover:scale-110 group"
-                    aria-label={link.label}
-                  >
-                    {socialLinkIcons(link.label)}
-                  </Link>
-                ))}
+        <div className="relative z-10 py-8 sm:py-10 lg:py-12 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            {/* Column 1: Social */}
+            <div className="scroll-animate opacity-0 translate-y-10 sm:col-span-1">
+              <h2 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-[#E6D28C] to-[#D4AF37] bg-clip-text text-transparent animate-gradient">
+                Follow Us
+              </h2>
+              <div className="flex flex-wrap gap-3 sm:gap-4">
+                {socialLinks.length &&
+                  socialLinks.map((link, index) => (
+                    <Link
+                      key={index}
+                      to={link.href}
+                      className="p-2 rounded-lg bg-gradient-to-br from-[#E6D28C]/10 to-[#D4AF37]/5 border border-[#E6D28C]/20 transform transition-all duration-300 hover:scale-110 hover:bg-gradient-to-br hover:from-[#E6D28C]/20 hover:to-[#D4AF37]/10 hover:border-[#D4AF37]/40 hover:shadow-lg hover:shadow-[#D4AF37]/20 group active:scale-95"
+                      aria-label={link.label}
+                    >
+                      {socialLinkIcons(link.label)}
+                    </Link>
+                  ))}
+              </div>
             </div>
-          </div>
 
-          {/* Column 2: Quick Links */}
-          <div
-            className="scroll-animate opacity-0 translate-y-10"
-            style={{ transitionDelay: "100ms" }}
-          >
-            <h2 className="text-xl font-bold mb-4 bg-gradient-to-r from-[#E6D28C] to-[#D4AF37] bg-clip-text text-transparent animate-gradient">
-              Quick Links
-            </h2>
-            <ul className="space-y-2">
-              {quickLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    to={link.href}
-                    className="text-[#E6D28C]/80 hover:text-[#D4AF37] transition-colors duration-300 flex items-center gap-2 group"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]/70 group-hover:scale-125 transition-transform duration-300"></span>
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Column 3: Contact Info */}
-          <div
-            className="scroll-animate opacity-0 translate-y-10 col-span-2"
-            style={{ transitionDelay: "200ms" }}
-          >
-            <h2 className="text-xl font-bold mb-4 bg-gradient-to-r from-[#E6D28C] to-[#D4AF37] bg-clip-text text-transparent animate-gradient">
-              Contact Us
-            </h2>
-            <div className="space-y-3">
-              {contactInfo.length &&
-                contactInfo.map((info, index) => (
-                  <div key={index} className="flex items-center gap-2 group">
-                    {contactInfoIcons(info.label)}
-                    <p className="text-[#E6D28C]/80 group-hover:text-[#D4AF37] transition-colors duration-300">
-                      {info.value}
-                    </p>
-                  </div>
+            {/* Column 2: Quick Links */}
+            <div
+              className="scroll-animate opacity-0 translate-y-10 sm:col-span-1"
+              style={{ transitionDelay: "100ms" }}
+            >
+              <h2 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-[#E6D28C] to-[#D4AF37] bg-clip-text text-transparent animate-gradient">
+                Quick Links
+              </h2>
+              <ul className="space-y-3">
+                {quickLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      to={link.href}
+                      className="text-[#E6D28C]/80 hover:text-[#D4AF37] transition-all duration-300 flex items-center gap-3 group py-1 px-2 rounded-md hover:bg-[#E6D28C]/5 active:bg-[#E6D28C]/10"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]/70 group-hover:scale-125 group-hover:bg-[#D4AF37] transition-all duration-300"></span>
+                      <span className="text-sm sm:text-base">{link.label}</span>
+                    </Link>
+                  </li>
                 ))}
+              </ul>
+            </div>
+
+            {/* Column 3: Contact Info */}
+            <div
+              className="scroll-animate opacity-0 translate-y-10 sm:col-span-2 lg:col-span-2"
+              style={{ transitionDelay: "200ms" }}
+            >
+              <h2 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-[#E6D28C] to-[#D4AF37] bg-clip-text text-transparent animate-gradient">
+                Contact Us
+              </h2>
+              <div className="space-y-4 sm:space-y-5">
+                {contactInfo.length &&
+                  contactInfo.map((info, index) => (
+                    <div
+                      key={index}
+                      className="flex items-start gap-3 group p-2 rounded-lg"
+                    >
+                      {contactInfoIcons(info.label)}
+                      <div className="flex-1 min-w-0">
+                        <p className="text-xs sm:text-sm text-[#E6D28C]/60 font-medium mb-1 uppercase tracking-wide">
+                          {info.label}
+                        </p>
+                        <p className="text-sm sm:text-base text-[#E6D28C]/80 leading-relaxed break-words">
+                          {info.value}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+              </div>
             </div>
           </div>
         </div>
 
         {/* Divider with gold gradient */}
-        <div className="relative z-10">
-          <div className="h-px w-full bg-gradient-to-r from-transparent via-[#E6D28C]/30 to-transparent my-6"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="h-px w-full bg-gradient-to-r from-transparent via-[#E6D28C]/30 to-transparent my-6 sm:my-8"></div>
         </div>
 
         {/* Copyright section */}
-        <div className="relative z-10 flex flex-col md:flex-row justify-between items-center py-4 text-sm">
-          <div className="text-[#E6D28C]/70 mb-4 md:mb-0 text-center md:text-left">
-            <p>© 2025 MCMN-MM.COM. All Rights Reserved.</p>
-          </div>
-          <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
-            <Link
-              to="/faq"
-              className="text-[#E6D28C]/70 hover:text-[#D4AF37] transition-colors duration-300"
-            >
-              FAQ
-            </Link>
-            <Link
-              to="/copyright"
-              className="text-[#E6D28C]/70 hover:text-[#D4AF37] transition-colors duration-300"
-            >
-              Copyright
-            </Link>
-            <Link
-              to="/privacy"
-              className="text-[#E6D28C]/70 hover:text-[#D4AF37] transition-colors duration-300"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              to="/terms"
-              className="text-[#E6D28C]/70 hover:text-[#D4AF37] transition-colors duration-300"
-            >
-              Terms & Conditions
-            </Link>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-6 sm:pb-8">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6">
+            <div className="text-[#E6D28C]/70 text-center sm:text-left">
+              <p className="text-xs sm:text-sm">
+                © 2025 MCMN-MM.COM. All Rights Reserved.
+              </p>
+            </div>
+            {/* <div className="flex flex-wrap justify-center sm:justify-end gap-x-4 sm:gap-x-6 gap-y-2">
+              <Link
+                to="/faq"
+                className="text-[#E6D28C]/70 hover:text-[#D4AF37] transition-all duration-300 text-xs sm:text-sm py-1 px-2 rounded hover:bg-[#E6D28C]/5"
+              >
+                FAQ
+              </Link>
+              <Link
+                to="/copyright"
+                className="text-[#E6D28C]/70 hover:text-[#D4AF37] transition-all duration-300 text-xs sm:text-sm py-1 px-2 rounded hover:bg-[#E6D28C]/5"
+              >
+                Copyright
+              </Link>
+              <Link
+                to="/privacy"
+                className="text-[#E6D28C]/70 hover:text-[#D4AF37] transition-all duration-300 text-xs sm:text-sm py-1 px-2 rounded hover:bg-[#E6D28C]/5"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                to="/terms"
+                className="text-[#E6D28C]/70 hover:text-[#D4AF37] transition-all duration-300 text-xs sm:text-sm py-1 px-2 rounded hover:bg-[#E6D28C]/5"
+              >
+                Terms & Conditions
+              </Link>
+            </div> */}
           </div>
         </div>
 
@@ -370,6 +384,53 @@ export default function Footer() {
         .animate-in {
           opacity: 1 !important;
           transform: translateY(0) !important;
+        }
+
+        @keyframes float {
+          0%,
+          100% {
+            transform: translateY(0px) rotate(0deg);
+          }
+          50% {
+            transform: translateY(-10px) rotate(180deg);
+          }
+        }
+
+        @keyframes twinkle {
+          0%,
+          100% {
+            opacity: 0.3;
+            transform: scale(1);
+          }
+          50% {
+            opacity: 1;
+            transform: scale(1.2);
+          }
+        }
+
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+
+        .animate-twinkle {
+          animation: twinkle 4s ease-in-out infinite;
+        }
+
+        .animate-gradient {
+          background-size: 200% 200%;
+          animation: gradient 3s ease infinite;
+        }
+
+        @keyframes gradient {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
         }
       `}</style>
     </>

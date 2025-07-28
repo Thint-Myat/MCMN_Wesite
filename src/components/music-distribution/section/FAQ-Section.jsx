@@ -62,10 +62,10 @@ export default function FAQ_Section() {
             {faqs.map((faq, index) => (
               <div
                 key={faq.id}
-                className="group bg-gradient-to-r from-black/80 to-black/60 rounded-lg md:rounded-xl border border-[#E6D28C]/20 hover:border-[#E6D28C]/40 overflow-hidden transition-all duration-300 hover:shadow-[0_0_15px_rgba(230,210,140,0.2)]"
+                className="group bg-gradient-to-r from-black/80 to-black/60 rounded-lg md:rounded-xl border border-[#E6D28C]/20"
               >
                 <button
-                  className="w-full px-4 sm:px-5 md:px-6 py-3 sm:py-4 text-left flex justify-between items-start gap-3 focus:outline-none focus:ring-2 focus:ring-[#E6D28C]/30 focus:ring-inset group-hover:bg-black/20 transition-all duration-300"
+                  className="w-full px-4 sm:px-5 md:px-6 py-3 sm:py-4 text-left flex justify-between items-start gap-3"
                   onClick={() => toggleFAQ(index)}
                 >
                   <span className="text-[#E6D28C] font-medium text-sm sm:text-base md:text-lg leading-relaxed flex-1 pr-2">
@@ -92,8 +92,8 @@ export default function FAQ_Section() {
                 </button>
                 <div
                   className={`px-4 sm:px-5 md:px-6 overflow-hidden transition-all duration-300 ease-in-out ${
-                    activeIndex === index 
-                      ? "py-3 sm:py-4 max-h-96 opacity-100" 
+                    activeIndex === index
+                      ? "py-3 sm:py-4 max-h-96 opacity-100"
                       : "max-h-0 py-0 opacity-0"
                   }`}
                 >
@@ -131,7 +131,9 @@ export default function FAQ_Section() {
                   နောက်ထပ် မေးခွန်းများ ရှိပါသလား?
                 </h3>
                 <p className="text-[#E6D28C]/80 text-xs sm:text-sm md:text-base leading-relaxed mb-4 md:mb-6">
-                  အခြားမေးခွန်းများရှိပါက ကျွန်ုပ်တို့ထံ ဆက်သွယ်မေးမြန်းနိုင်ပါသည်။ ကျွန်ုပ်တို့သည် သင့်အား အကောင်းဆုံး ဝန်ဆောင်မှုပေးရန် အသင့်ရှိပါသည်။
+                  အခြားမေးခွန်းများရှိပါက ကျွန်ုပ်တို့ထံ
+                  ဆက်သွယ်မေးမြန်းနိုင်ပါသည်။ ကျွန်ုပ်တို့သည် သင့်အား အကောင်းဆုံး
+                  ဝန်ဆောင်မှုပေးရန် အသင့်ရှိပါသည်။
                 </p>
               </div>
               <Link
