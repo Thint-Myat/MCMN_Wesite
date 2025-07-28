@@ -111,14 +111,14 @@ export default function NavBar_1_Section({ scrolled, setShowSignUpBox }) {
           </div> */}
 
           {/* Sign Up */}
-          <button
+          {/* <button
             onClick={() => setShowSignUpBox(true)}
             className="bg-gradient-to-r from-[#E6D28C] to-[#D4AF37] text-black px-3 py-1.5 lg:px-4 lg:py-2 
             rounded-lg text-sm lg:text-base font-medium lg:font-semibold hover:shadow-[0_0_15px_rgba(230,210,140,0.5)] transition-all duration-300 transform hover:scale-105 
             focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 focus:ring-offset-black"
           >
             Sign Up
-          </button>
+          </button> */}
         </ul>
 
         {/* Mobile/Tablet Quick Actions */}
@@ -161,14 +161,14 @@ export default function NavBar_1_Section({ scrolled, setShowSignUpBox }) {
           </a>
 
           {/* Mobile Sign Up Button */}
-          <button
+          {/* <button
             onClick={() => setShowSignUpBox(true)}
             className="bg-gradient-to-r from-[#E6D28C] to-[#D4AF37] text-black px-3 py-1.5 
             rounded-lg text-sm font-medium hover:shadow-[0_0_15px_rgba(230,210,140,0.5)] transition-all duration-300 transform hover:scale-105 
             focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 focus:ring-offset-black"
           >
             Sign Up
-          </button>
+          </button> */}
         </div>
       </div>
 
@@ -213,8 +213,8 @@ export default function NavBar_1_Section({ scrolled, setShowSignUpBox }) {
               </h4>
 
               {/* Email Card */}
-              <a
-                href="mailto:myanmarchristianmusicnetwork@gmail.com"
+              <Link
+                to="mailto:myanmarchristianmusicnetwork@gmail.com"
                 className="flex items-center gap-4 p-4 bg-black rounded-xl border border-[#E6D28C]/20 hover:border-[#D4AF37]/40 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg group"
               >
                 <div className="p-2 bg-[#E6D28C]/20 rounded-lg group-hover:bg-[#D4AF37]/30 transition-colors duration-300">
@@ -237,11 +237,11 @@ export default function NavBar_1_Section({ scrolled, setShowSignUpBox }) {
                     myanmarchristianmusicnetwork@gmail.com
                   </p>
                 </div>
-              </a>
+              </Link>
 
               {/* Phone Card */}
-              <a
-                href="tel:+959799901085"
+              <Link
+                to="tel:+959799901085"
                 className="flex items-center gap-4 p-4 bg-black rounded-xl border border-[#E6D28C]/20 hover:border-[#D4AF37]/40 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg group"
               >
                 <div className="p-2 bg-[#E6D28C]/20 rounded-lg group-hover:bg-[#D4AF37]/30 transition-colors duration-300">
@@ -264,11 +264,11 @@ export default function NavBar_1_Section({ scrolled, setShowSignUpBox }) {
                     +959 799901085
                   </p>
                 </div>
-              </a>
+              </Link>
             </div>
 
-            {/* Enhanced Admin Link */}
-            <div className="pt-2">
+            {/* Admin Link */}
+            {/* <div className="pt-2">
               <h4 className="text-sm font-medium text-[#D4AF37] uppercase tracking-wider mb-3">
                 Quick Access
               </h4>
@@ -312,7 +312,7 @@ export default function NavBar_1_Section({ scrolled, setShowSignUpBox }) {
                   />
                 </svg>
               </NavLink>
-            </div>
+            </div> */}
 
             {/* Close Button */}
             <div className="pt-4 border-t border-[#E6D28C]/20">
